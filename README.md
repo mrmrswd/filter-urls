@@ -10,10 +10,67 @@ This Bash script is a utility designed to filter a list of URLs based on various
 - Preserve blog-like content or trailing slashes in URLs.
 - Save the filtered results to a specified output file or display them in the terminal.
 
+## Installation
+
+### Prerequisites
+
+1. **Bash Shell**: Ensure you have a Linux/Unix-based system with a Bash shell (default on most Linux distributions and macOS).
+2. **Basic Tools**: The script requires `grep`, `sed`, and `cat`, which are typically included in most Linux distributions. Verify their availability by running:
+   ```bash
+   which grep sed cat
+   ```
+
+### Steps to Install
+
+1. **Download the Script**:
+   Save the script file as `filter_urls.sh`. You can create the file manually or download it from your repository.
+
+2. **Make the Script Executable**:
+   Run the following command to give the script execution permissions:
+   ```bash
+   chmod +x filter_urls.sh
+   ```
+
+3. **Move the Script to a Directory in Your PATH**:
+   To make the script available system-wide, move it to a directory included in your system's `PATH`:
+   ```bash
+   sudo mv filter_urls.sh /usr/local/bin/filter_urls
+   ```
+
+   After this step, you can run the script using the command `filter_urls`.
+
+4. **Verify Installation**:
+   Ensure the script is installed and ready for use:
+   ```bash
+   filter_urls --help
+   ```
+
+### Optional: Install Dependencies (if required)
+
+If any required tools are missing, you can install them using your system's package manager:
+
+- **For Debian/Ubuntu**:
+  ```bash
+  sudo apt update
+  sudo apt install grep sed coreutils
+  ```
+
+- **For Red Hat/Fedora**:
+  ```bash
+  sudo dnf install grep sed coreutils
+  ```
+
+- **For macOS (using Homebrew)**:
+  ```bash
+  brew install grep gnu-sed
+  ```
+
+---
+
 ## Usage
 
 ```bash
-./filter_urls.sh [-i input_file] [-o output_file] [-w whitelist] [-b blacklist] [-f filters]
+filter_urls [-i input_file] [-o output_file] [-w whitelist] [-b blacklist] [-f filters]
 ```
 
 ### Options:
@@ -39,27 +96,27 @@ This Bash script is a utility designed to filter a list of URLs based on various
 
 #### Filter URLs and display results in the terminal:
 ```bash
-./filter_urls.sh -i urls.txt -f hasparams,noext
+filter_urls -i urls.txt -f hasparams,noext
 ```
 
 #### Save filtered URLs to a file:
 ```bash
-./filter_urls.sh -i urls.txt -o filtered_urls.txt -f hasext
+filter_urls -i urls.txt -o filtered_urls.txt -f hasext
 ```
 
 #### Whitelist specific extensions:
 ```bash
-./filter_urls.sh -i urls.txt -w php,html
+filter_urls -i urls.txt -w php,html
 ```
 
 #### Blacklist specific extensions:
 ```bash
-./filter_urls.sh -i urls.txt -b jpg,png,css
+filter_urls -i urls.txt -b jpg,png,css
 ```
 
 #### Combine filters:
 ```bash
-./filter_urls.sh -i urls.txt -o filtered_urls.txt -f hasparams,keepslash -b jpg,png
+filter_urls -i urls.txt -o filtered_urls.txt -f hasparams,keepslash -b jpg,png
 ```
 
 ## Input Validation
@@ -72,15 +129,6 @@ The script will exit with an error if:
 
 - If an output file is specified (`-o`), the filtered URLs are saved to that file.
 - If no output file is specified, the filtered URLs are displayed in the terminal.
-
-## Requirements
-
-- A Bash shell environment.
-- Standard Linux tools such as `grep` and `sed`.
-
-## How to Exit
-
-You can interrupt the script anytime by pressing `Ctrl + C`.
 
 ## Example Input and Output
 
@@ -98,7 +146,7 @@ http://example.com/assets/image.jpg
 ### Command:
 
 ```bash
-./filter_urls.sh -i urls.txt -b jpg,png -f noext,keepslash
+filter_urls -i urls.txt -b jpg,png -f noext,keepslash
 ```
 
 ### Output:
@@ -111,4 +159,4 @@ http://example.com/blog/why-cats-rule
 
 ---
 
-Feel free to customize and extend this script to meet your specific URL filtering needs!
+Feel free to customize and extend this script to suit your specific URL filtering needs!
