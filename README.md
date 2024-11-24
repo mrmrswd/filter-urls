@@ -10,6 +10,8 @@ This Bash script is a utility designed to filter a list of URLs based on various
 - Preserve blog-like content or trailing slashes in URLs.
 - Save the filtered results to a specified output file or display them in the terminal.
 
+![Filter URLs Example](https://camo.githubusercontent.com/50346bf4551c57896f1f8bea384ad72b28b9b48a2b628f5b2bb54976f7d7aef8/68747470733a2f2f692e6962622e636f2f783274574343352f75726f2d64656d6f2e706e67)
+
 ## Installation
 
 ### Prerequisites
