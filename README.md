@@ -26,14 +26,24 @@ This Bash script is a utility designed to filter a list of URLs based on various
 
 1. **Download the Script**:
    Save the script file as `filter_urls.sh`. You can create the file manually or download it from your repository.
+   
+1/1- **Clone the Repository: Clone the repository to your local machine using the following command**:
+```bash
+git clone https://github.com/mrmrswd/filter-urls.git
+```
 
-2. **Make the Script Executable**:
+1/2- **Navigate to the Directory: Change into the repository directory**:
+```bash
+cd filter-urls
+```
+   
+3. **Make the Script Executable**:
    Run the following command to give the script execution permissions:
    ```bash
    chmod +x filter_urls.sh
    ```
 
-3. **Move the Script to a Directory in Your PATH**:
+4. **Move the Script to a Directory in Your PATH**:
    To make the script available system-wide, move it to a directory included in your system's `PATH`:
    ```bash
    sudo mv filter_urls.sh /usr/local/bin/filter_urls
@@ -41,7 +51,7 @@ This Bash script is a utility designed to filter a list of URLs based on various
 
    After this step, you can run the script using the command `filter_urls`.
 
-4. **Verify Installation**:
+5. **Verify Installation**:
    Ensure the script is installed and ready for use:
    ```bash
    filter_urls --help
