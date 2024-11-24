@@ -26,7 +26,7 @@ This Bash script is a utility designed to filter a list of URLs based on various
 
 1. **Download the Script**:
    Save the script file as `filter_urls.sh`. You can create the file manually or download it from your repository.
-   
+
 1/1. **Clone the Repository: Clone the repository to your local machine using the following command**:
    ```bash
    git clone https://github.com/mrmrswd/filter-urls.git
