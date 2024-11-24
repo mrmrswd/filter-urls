@@ -29,12 +29,12 @@ This Bash script is a utility designed to filter a list of URLs based on various
    
 1/1- **Clone the Repository: Clone the repository to your local machine using the following command**:
     ```bash
-git clone https://github.com/mrmrswd/filter-urls.git
+    git clone https://github.com/mrmrswd/filter-urls.git
     ```
 
 1/2- **Navigate to the Directory: Change into the repository directory**:
     ```bash
-cd filter-urls
+    cd filter-urls
     ```
    
 3. **Make the Script Executable**:
